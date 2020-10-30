@@ -1,0 +1,11 @@
+# macOS
+*.DS_Store
+
+# Python module
+*.pyc
+
+# Python cache
+*.egg-info
+__pycache__
+dist
+build

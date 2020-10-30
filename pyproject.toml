@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "numerology"
+version = "0.2.0"
+description = "Simple numerology tool to have fun with your friends."
+authors = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
+maintainers = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
+readme = "README.rst"
+homepage = "https://github.com/compuuteio/numerology"
+repository = "https://github.com/compuuteio/numerology"
+documentation = "https://github.com/compuuteio/numerology/README.rst"
+keywords = ["numerology", "pythagorean", "compuute.io", "clairvoyance", "voyance"]
+classifiers = [
+    "Programming Language :: Python :: 3.7", 
+    "Topic :: Scientific/Engineering :: Astronomy", 
+    "Topic :: Games/Entertainment :: Fortune Cookies"
+]
+# licence = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+robot = "^20071211"
+
+[tool.poetry.scripts]
+main = "main:start_app"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/compuuteio/numerology/issues"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
