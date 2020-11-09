@@ -4,6 +4,7 @@ version = "0.2.0"
 description = "Simple numerology tool to have fun with your friends."
 authors = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
 maintainers = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
+license = "Apache-2.0"
 readme = "README.rst"
 homepage = "https://github.com/compuuteio/numerology"
 repository = "https://github.com/compuuteio/numerology"
@@ -14,7 +15,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Astronomy", 
     "Topic :: Games/Entertainment :: Fortune Cookies"
 ]
-# licence = "MIT"
+
 
 [tool.poetry.dependencies]
 python = "^3.7"
