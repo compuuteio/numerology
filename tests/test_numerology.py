@@ -1,47 +1,65 @@
 from numerology import __version__, PythagoreanNumerology
 import unittest
 
+# python -m unittest tests/test_numerology.py 
+
 class VersionTestCase(unittest.TestCase):
     def test_version(self):
-        assert __version__ == '0.2.0'
+        assert __version__ == '0.4.0'
 
 class PythagoreanTestCase(unittest.TestCase):
     def setUp(self):
         self.name1 = PythagoreanNumerology("Jean-Pierre", "Boisrond", "1958-12-15")
-        # self.name2 = PythagoreanNumerology("Michel", "Raynal")
-        # self.name3 = PythagoreanNumerology("Muriel", "Darbois")
-        
-        self.name1.verbose = False
-        # self.name2.verbose = False
-        # self.name3.verbose = False
         
     def tearDown(self):
         pass
-        
-    def test_nombre_actif(self):
-        self.assertEqual(11, self.name1.nombre_actif)
-        # self.assertEqual(5, self.name2.nombre_actif)
-        # self.assertEqual(6, self.name3.nombre_actif)
     
-    def test_nombre_hereditaire(self):
-        self.assertEqual(6, self.name1.nombre_hereditaire)
-        # self.assertEqual(8, self.name2.nombre_hereditaire)
-        # self.assertEqual(5, self.name3.nombre_hereditaire)
+    def test_first_name(self):
+        self.assertEqual("Jean-Pierre", self.name1.key_figures['first_name'])
+    
+    def test_last_name(self):
+        self.assertEqual("Boisrond", self.name1.key_figures['last_name'])
+    
+    def test_birthday(self):
+        self.assertEqual("1958-12-15", self.name1.key_figures['birthdate'])
         
-    def test_nombre_d_expression(self):
-        self.assertEqual(8, self.name1.nombre_d_expression)
-        # self.assertEqual(4, self.name2.nombre_d_expression)
-        # self.assertEqual(2, self.name3.nombre_d_expression)
+    def test_hearth_desire_number(self):
+        self.assertEqual(1, self.name1.key_figures['hearth_desire_number'])
         
-    def test_nombre_intime(self):
-        self.assertEqual(1, self.name1.nombre_intime)
-        # self.assertEqual(5, self.name2.nombre_intime)
-        # self.assertEqual(6, self.name3.nombre_intime)
+    def test_personality_number(self):
+        self.assertEqual(7, self.name1.key_figures['personality_number'])
         
-    def test_de_realisation(self):
-        self.assertEqual(7, self.name1.nombre_de_realisation)
-        # self.assertEqual(8, self.name2.nombre_de_realisation)
-        # self.assertEqual(5, self.name3.nombre_de_realisation)
+    def test_active_number(self):
+        self.assertEqual(2, self.name1.key_figures['active_number'])
+    
+    def test_legacy_number(self):
+        self.assertEqual(6, self.name1.key_figures['legacy_number'])
+        
+    def test_life_path_number(self):
+        self.assertEqual(5, self.name1.key_figures['life_path_number'])
+        
+    def test_life_path_number_alternative(self):
+        self.assertEqual(5, self.name1.key_figures['life_path_number_alternative'])
+        
+    def test_full_name_numbers(self):
+        self.assertEqual({1: 3, 2: 1, 4: 1, 5: 5, 6: 2, 7: 1, 9: 5}, self.name1.key_figures['full_name_numbers'])
+        
+    def test_full_name_missing_numbers(self):
+        self.assertEqual((3, 8), self.name1.key_figures['full_name_missing_numbers'])
+        
+    def test_birthdate_day_num(self):
+        self.assertEqual(6, self.name1.key_figures['birthdate_day_num'])
+        
+    def test_birthdate_month_num(self):
+        self.assertEqual(3, self.name1.key_figures['birthdate_month_num'])
+        
+    def test_birthdate_year_num(self):
+        self.assertEqual(5, self.name1.key_figures['birthdate_year_num'])
+        
+    def test_birthdate_year_num_alternative(self):
+        self.assertEqual(4, self.name1.key_figures['birthdate_year_num_alternative'])
 
+    # Power Number not implemented so far.
+    
 if __name__ == "__main__":
-    unittest.main() # run all tests
+    unittest.main()

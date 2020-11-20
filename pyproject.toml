@@ -1,14 +1,14 @@
 [tool.poetry]
 name = "numerology"
-version = "0.2.0"
+version = "0.4.0"
 description = "Simple numerology tool to have fun with your friends."
 authors = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
 maintainers = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
 license = "Apache-2.0"
-readme = "README.rst"
+readme = "README.md"
 homepage = "https://github.com/compuuteio/numerology"
 repository = "https://github.com/compuuteio/numerology"
-documentation = "https://github.com/compuuteio/numerology/README.rst"
+documentation = "https://github.com/compuuteio/numerology/README.md"
 keywords = ["numerology", "pythagorean", "compuute.io", "clairvoyance", "voyance"]
 classifiers = [
     "Programming Language :: Python :: 3.7", 
