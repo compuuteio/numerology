@@ -9,3 +9,7 @@
 __pycache__
 dist
 build
+poetry.lock
+
+# Quick test files
+test.py
