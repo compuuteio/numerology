@@ -7,7 +7,12 @@ The interpretations are not implemented yet.
 
 ## 2. Installation
 
-Download the package in your working directory.
+```shell
+# Option 1: pip
+pip install numerology
+
+# Option 2: Download the numerology folder on GitHub and add it to your work folder.
+```
 
 ## 3. How to use it
 
@@ -58,5 +63,22 @@ The precedent example should print the dict below:
     ]
 }
 ```
+
+## 3. Future log
+
+Will come:
+
+- Vedic Numerology implementation (original code by Andrii KRAVCHUK that will be adapted for consistency with the Pythagorean Numerology)
+- Interpretations
+
+## 4. Special thanks
+
+In the beginning, this code was a simple tool for my friends who were struggling with calculations on paper. I could not imagine it would have gone so far.
+
+A special thanks to:
+
+- Stéphane Y. for the book 'ABC de la numérologie' by Jean-Daniel FERMIER which helped me understand the world of numerology
+- Andrii KRAVCHUK (@yakninja) for transferring his ownership of the PyPi repository to me. That makes the command `pip install numerology` possible for this code
+- Kévin YAUY (@kyauy) for letting me see all the potential of Python
 
 Have fun!
