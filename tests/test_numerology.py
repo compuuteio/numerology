@@ -6,7 +6,7 @@ import unittest
 
 class VersionTestCase(unittest.TestCase):
     def test_version(self):
-        assert __version__ == '0.5.0'
+        assert __version__ == '0.5.1'
 
 class PythagoreanTestCase(unittest.TestCase):
     def setUp(self):

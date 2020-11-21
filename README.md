@@ -22,7 +22,7 @@ from numerology import PythagoreanNumerology
 
 # Birthdate format: yyyy-mm-dd
 # Birthdate is optional to let you have a partial numerology if that information is missing.
-my_numerology = PythagoreanNumerology("First name", "Last name", birthdate)
+my_numerology = PythagoreanNumerology("First name", "Last name", "Birthdate")
 
 # Example:
 his_numerology = PythagoreanNumerology("Barrack", "Obama", "1961-08-04")
