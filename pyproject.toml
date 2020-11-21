@@ -1,19 +1,20 @@
 [tool.poetry]
 name = "numerology"
-version = "0.4.0"
+version = "0.5.1"
 description = "Simple numerology tool to have fun with your friends."
-authors = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
+authors =  ["Emmanuel GUENOU <emmanuel@compuute.io>", "Andrii KRAVCHUK <andrii@yakninja.pro>"] 
 maintainers = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
 license = "Apache-2.0"
 readme = "README.md"
 homepage = "https://github.com/compuuteio/numerology"
 repository = "https://github.com/compuuteio/numerology"
 documentation = "https://github.com/compuuteio/numerology/README.md"
-keywords = ["numerology", "pythagorean", "compuute.io", "clairvoyance", "voyance"]
+keywords = ["numerology", "pythagorean", "vedic", "clairvoyance", "voyance"]
 classifiers = [
     "Programming Language :: Python :: 3.7", 
-    "Topic :: Scientific/Engineering :: Astronomy", 
-    "Topic :: Games/Entertainment :: Fortune Cookies"
+    "Topic :: Games/Entertainment :: Fortune Cookies",
+    "Topic :: Religion",
+    "Topic :: Scientific/Engineering :: Mathematics"
 ]
 
 

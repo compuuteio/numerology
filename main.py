@@ -9,7 +9,7 @@ def start_app():
     last_name = input("Enter your last name: ")
     birthdate = input("Enter your birthdate (yyyy-MM-dd, example 1994-11-30): ")
     
-    my_numerology = PythagoreanNumerology(first_name, last_name, birthdate)
+    my_pythagorean_numerology = PythagoreanNumerology(first_name, last_name, birthdate)
 
 if __name__ == "__main__":
     start_app()

@@ -1,11 +1,12 @@
 from numerology import __version__, PythagoreanNumerology
 import unittest
 
+# Use the command below to run tests
 # python -m unittest tests/test_numerology.py 
 
 class VersionTestCase(unittest.TestCase):
     def test_version(self):
-        assert __version__ == '0.4.0'
+        assert __version__ == '0.5.1'
 
 class PythagoreanTestCase(unittest.TestCase):
     def setUp(self):
