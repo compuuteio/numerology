@@ -64,14 +64,14 @@ The precedent example should print the dict below:
 }
 ```
 
-## 3. Future log
+## 4. Future log
 
 Will come:
 
 - Vedic Numerology implementation (original code by Andrii KRAVCHUK that will be adapted for consistency with the Pythagorean Numerology)
 - Interpretations
 
-## 4. Special thanks
+## 5. Special thanks
 
 In the beginning, this code was a simple tool for my friends who were struggling with calculations on paper. I could not imagine it would have gone so far.
 
