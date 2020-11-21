@@ -66,7 +66,7 @@ The precedent example should print the dict below:
 
 ## 4. Future log
 
-Will come:
+Features to implement:
 
 - Vedic Numerology implementation (original code by Andrii KRAVCHUK that will be adapted for consistency with the Pythagorean Numerology)
 - Interpretations
