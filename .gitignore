@@ -11,5 +11,6 @@ dist
 build
 poetry.lock
 
-# Quick test files
+# Quick test files and old folders
 test.py
+old
