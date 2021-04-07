@@ -3,7 +3,8 @@
 ## 1. About
 
 A simple numerology tool to have fun with friends.
-The interpretations are not fully implemented yet.
+The interpretations are not fully implemented yet but the mechanism to get them is fully operational.
+Currently, you can have the life path interpretation in French and English, depending on your OS language.
 
 ## 2. Installation
 
