@@ -2,7 +2,7 @@
 
 ## 1. About
 
-A simple numerology tool to have fun with friends.
+A simple multilanguage numerology tool to have fun with friends.
 The interpretations are not fully implemented yet but the mechanism to get them is fully operational.
 Currently, you can have the life path interpretation in French and English, depending on your OS language.
 
@@ -19,22 +19,22 @@ pip install numerology
 
 ```python
 # Import
-from numerology import Pythagorean
+from numerology import PythagoreanNumerology
 
 # Birthdate format: yyyy-mm-dd
 # Birthdate is optional to let you have a partial numerology if that information is missing.
-my_numerology = Pythagorean("First name", "Last name", "Birthdate")
+my_numerology = PythagoreanNumerology("First name", "Last name", "Birthdate")
 
 # Example:
-his_numerology = Pythagorean("Barrack", "Obama", "1961-08-04")
+his_numerology = PythagoreanNumerology("Barrack", "Obama", "1961-08-04")
 ```
 
 You could chose to either get the key figures, to link it to your own interpretations, or get the available interpretations.
 
-### Get only the key figures
+### 3.1. Get only the key figures
 
 ```python
-from numerology import Pythagorean
+from numerology import PythagoreanNumerology
 num = Pythagorean(first_name="Barack", last_name="Obama", birthdate="1961-08-04", verbose=False)
 print(num.key_figures)
 ```
@@ -76,10 +76,10 @@ The example above should give something like this:
 }
 ```
 
-### Get the available interpretations
+### 3.2. Get the available interpretations
 
 ```python
-from numerology import Pythagorean
+from numerology import PythagoreanNumerology
 num = Pythagorean(first_name="Barack", last_name="Obama", birthdate="1961-08-04", verbose=False)
 print(num.interpretations)
 ```
@@ -119,5 +119,6 @@ A special thanks to:
 - Andrii KRAVCHUK (@yakninja) for transferring his ownership of the PyPi repository to me. That makes the command `pip install numerology` possible for this code
 - Kévin YAUY, PhD. (@kyauy) for letting me see all the potential of Python
 - Jennifer GORWOOD, PhD. for helping for typing the interpretations in French
+- and all the contributors of this project
 
 Have fun!

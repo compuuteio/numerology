@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "numerology"
-version = "1.0"
+version = "1.1"
 description = "Simple numerology tool to have fun with your friends."
 authors =  ["Emmanuel GUENOU <emmanuel@compuute.io>", "Andrii KRAVCHUK <andrii@yakninja.pro>"] 
 maintainers = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
