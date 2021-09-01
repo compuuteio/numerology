@@ -1,8 +1,14 @@
 import gettext
 import locale
+import os
+import sys
 from typing import Dict, List, Optional
 
 from .meanings.life_path import LifePathNumber
+
+localedir_path = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), "..", "locale"
+)
 
 default_lang = "en"
 try:
@@ -12,26 +18,31 @@ except:
     # If unable to get the locale language, use English
     lang = default_lang
 try:
-    language = gettext.translation('numerology', localedir='locale', languages=[lang])
+    language = gettext.translation(
+        "numerology", localedir=localedir_path, languages=[lang]
+    )
 except:
     # If the current language does not have a translation, the default laguage (English) will be used English
-    language = gettext.translation('numerology', localedir='locale', languages=[default_lang])
+    language = gettext.translation(
+        "numerology", localedir=localedir_path, languages=[default_lang]
+    )
 language.install()
 _ = language.gettext
 
-class Interpretations():
-    
+
+class Interpretations:
+
     key_figures: Dict = {}
     _meanings: Dict = {}
-    
+
     def __init__(self, key_figures: Dict):
         self.key_figures = key_figures
         self.get_all_interpretations()
-        
+
     def get_all_interpretations(self):
         for k, v in self.key_figures.items():
             self._meanings[k] = self.get_interpretation(k, v)
-    
+
     @classmethod
     def get_interpretation(cls, name: str, value: int):
         interpretation = None
@@ -43,17 +54,16 @@ class Interpretations():
             interpretation = value
         elif name == "life_path_number":
             interpretation = {
-                "name": _("Life Path Number"), 
+                "name": _("Life Path Number"),
                 "number": "2",
-                "meaning": cls.life_path_number(number=value)
-                }
-        return interpretation    
-    
+                "meaning": cls.life_path_number(number=value),
+            }
+        return interpretation
+
     @classmethod
     def life_path_number(cls, number: int):
         return LifePathNumber.meanings.get(number, None)
-    
+
     @property
     def meanings(self):
         return self._meanings
-    

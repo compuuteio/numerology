@@ -1,6 +1,12 @@
 import gettext
 import locale
 from typing import Dict
+import os
+import sys
+
+localedir_path = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), "..", "..", "locale"
+)
 
 default_lang = "en"
 try:
@@ -10,12 +16,16 @@ except:
     # If unable to get the locale language, use English
     lang = default_lang
 try:
-    language = gettext.translation('numerology', localedir='locale', languages=[lang])
+    language = gettext.translation(
+        "numerology", localedir=localedir_path, languages=[lang]
+    )
     language.install()
     _ = language.gettext
 except:
     # If the current language does not have a translation, the default laguage (English) will be used English
-    language = gettext.translation('numerology', localedir='locale', languages=[default_lang])
+    language = gettext.translation(
+        "numerology", localedir=localedir_path, languages=[default_lang]
+    )
     language.install()
     _ = language.gettext
 

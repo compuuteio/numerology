@@ -1,11 +1,17 @@
 import gettext
 import logging
 import math
+import os
+import sys
 from collections import Counter
 from typing import Dict, Optional, Tuple
 
 from .common import Functions as fct
 from .interpretations import Interpretations
+
+localedir_path = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), "..", "locale"
+)
 
 default_lang = "en"
 try:
@@ -15,10 +21,14 @@ except:
     # If unable to get the locale language, use English
     lang = default_lang
 try:
-    language = gettext.translation('numerology', localedir='locale', languages=[lang])
+    language = gettext.translation(
+        "numerology", localedir=localedir_path, languages=[lang]
+    )
 except:
     # If the current language does not have a translation, the default laguage (English) will be used English
-    language = gettext.translation('numerology', localedir='locale', languages=[default_lang])
+    language = gettext.translation(
+        "numerology", localedir=localedir_path, languages=[default_lang]
+    )
 language.install()
 _ = language.gettext
 

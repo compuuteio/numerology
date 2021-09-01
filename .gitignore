@@ -14,3 +14,10 @@ poetry.lock
 # Quick test files and old folders
 test.py
 old
+
+# vim
+*.swo
+*.swp
+
+# lint
+1/
