@@ -17,24 +17,27 @@ pip install numerology
 
 ## 3. How to use it
 
+### 3.1. Get full numerology
+
 ```python
 # Import
-from numerology import PythagoreanNumerology
+from numerology import Pythagorean
 
 # Birthdate format: yyyy-mm-dd
 # Birthdate is optional to let you have a partial numerology if that information is missing.
 my_numerology = PythagoreanNumerology("First name", "Last name", "Birthdate")
 
 # Example:
-his_numerology = PythagoreanNumerology("Barrack", "Obama", "1961-08-04")
+his_numerology = Pythagorean("Barrack", "Obama", "1961-08-04")
 ```
 
 You could chose to either get the key figures, to link it to your own interpretations, or get the available interpretations.
 
-### 3.1. Get only the key figures
+### 3.1. Get key figures only
 
 ```python
-from numerology import PythagoreanNumerology
+from numerology import Pythagorean
+
 num = Pythagorean(first_name="Barack", last_name="Obama", birthdate="1961-08-04", verbose=False)
 print(num.key_figures)
 ```
@@ -79,7 +82,8 @@ The example above should give something like this:
 ### 3.2. Get the available interpretations
 
 ```python
-from numerology import PythagoreanNumerology
+from numerology import Pythagorean
+
 num = Pythagorean(first_name="Barack", last_name="Obama", birthdate="1961-08-04", verbose=False)
 print(num.interpretations)
 ```

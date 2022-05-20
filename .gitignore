@@ -6,9 +6,9 @@
 
 # Python cache
 *.egg-info
-__pycache__
-dist
-build
+__pycache__/
+dist/
+build/
 poetry.lock
 
 # Quick test files and old folders
@@ -21,3 +21,6 @@ old
 
 # lint
 1/
+
+.vscode/
+.venv/
