@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "numerology"
-version = "1.1"
+version = "1.8"
 description = "Simple numerology tool to have fun with your friends."
 authors =  ["Emmanuel GUENOU <emmanuel@compuute.io>", "Andrii KRAVCHUK <andrii@yakninja.pro>"] 
 maintainers = ["Emmanuel GUENOU <emmanuel@compuute.io>"]
@@ -11,7 +11,7 @@ repository = "https://github.com/compuuteio/numerology"
 documentation = "https://github.com/compuuteio/numerology/README.md"
 keywords = ["numerology", "pythagorean", "vedic", "clairvoyance", "voyance"]
 classifiers = [
-    "Programming Language :: Python :: 3.7", 
+    "Programming Language :: Python :: 3.8", 
     "Topic :: Games/Entertainment :: Fortune Cookies",
     "Topic :: Religion",
     "Topic :: Scientific/Engineering :: Mathematics"
@@ -19,11 +19,12 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 robot = "^20071211"
+black = {version = "^22.3.0", allow-prereleases = true}
 
 [tool.poetry.scripts]
 main = "main:start_app"
