@@ -9,7 +9,7 @@ from numerology import Pythagorean
 import unittest
 
 # Use the command below to run tests
-# python -m unittest tests/test_numerology.py
+# python3 -m unittest tests/test_numerology.py
 
 
 # class VersionTestCase(unittest.TestCase):
