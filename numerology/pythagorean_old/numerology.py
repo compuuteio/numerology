@@ -137,7 +137,7 @@ class Numerology:
             print(_("KEY FIGURES:"))
             fct.print_beautiful_dict(dictionary=self.key_figures)
             print(_("INTERPRETATIONS:"))
-            fct.print_beautiful_dict(dictionary=self.interpretations)
+            fct.print_beautiful_dict(dictionary=self.interpretations.meanings)
 
     # CLASSMETHODS
 
@@ -269,7 +269,7 @@ class Numerology:
 
     @property
     def interpretations(self) -> Dict:
-        return self._interpretations.meanings
+        return self._interpretations
 
     @property
     def life_path_number(self) -> int:

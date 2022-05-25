@@ -3,13 +3,15 @@ import locale
 import os
 import sys
 
+from .pythagorean import Pythagorean
+
 # # For relative imports to work in Python 3.6
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 localedir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "locale")
 
-from pythagorean.common import Functions as fct
-from pythagorean.numerology import Numerology as Pythagorean
+# from pythagorean.common import Functions as fct
+# from pythagorean.numerology import Numerology as Pythagorean
 
 
 assert sys.version_info[0] == 3, "Numerology requires Python 3."
