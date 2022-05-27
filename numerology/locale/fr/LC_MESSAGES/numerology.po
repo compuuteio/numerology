@@ -1,340 +1,922 @@
 # French translations for numerology package.
-# Copyright (C) 2021 Emmanuel GUENOU <emmanuel@compuute.io>
+# Copyright (C) 2022 Emmanuel GUENOU <emmanuel@compuute.io>
 # This file is distributed under the same license as the numerology package.
-# System Administrator <emmanuel@compuute.io>, 2021.
+# Emmanuel GUENOU <emmanuel@compuute.io>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: numerology\n"
 "Report-Msgid-Bugs-To: emmanuel@compuute.io\n"
-"POT-Creation-Date: 2021-04-07 02:06+0200\n"
-"PO-Revision-Date: 2021-04-07 14:12+0200\n"
-"Last-Translator: System Administrator <emmanuel@compuute.io>\n"
+"POT-Creation-Date: 2022-05-25 23:09+0200\n"
+"PO-Revision-Date: 2022-05-25 23:10+0200\n"
+"Last-Translator: Emmanuel GUENOU <emmanuel@compuute.io>\n"
 "Language-Team: French\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.4.2\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
-#: main.py:9
+#: main.py:27
 msgid "Welcome!"
-msgstr "Bienvenue !"
-
-#: pythagorean/interpretations.py:34
-msgid "Life Path Number"
-msgstr "Numéro de chemin de vie"
-
-#: pythagorean/meanings/life_path.py:11
-msgid "Individual action life"
-msgstr "Vie d’action individuelle"
-
-#: pythagorean/meanings/life_path.py:13
-msgid ""
-"This life path promotes personal success and individual achievement. It "
-"symbolizes an active life and is often the scene of unexpected changes. It "
-"can be difficult at times, but a certain amount of luck prevails and helps "
-"to overcome obstacles.\n"
-"Requirements: The qualities necessary to take on this life path are: "
-"willpower, courage, self-confidence and perseverance.\n"
-"Challenges: This path is difficult for those who have 1 as the missing "
-"digit, and the expression numbers 2 and 4."
 msgstr ""
-"Ce chemin de vie favorise la réussite personnelle et les réalisations "
-"individuelles. Il symbolise une vie active et, est souvent le théâtre de "
-"changements inattendus. Il est parfois difficile, mais une certaine chance "
-"domine et permet de vaincre les obstacles.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : la "
-"volonté, le courage, la confiance en soi et la persévérance.\n"
-"Ce chemin est difficile pour ceux qui ont 1 comme chiffre manquant, et les "
-"nombres d’expression 2 et 4."
 
-#: pythagorean/meanings/life_path.py:17
-msgid "Life of collaboration and harmony with others"
-msgstr "Vie de collaboration et d’harmonie avec les autres"
-
-#: pythagorean/meanings/life_path.py:19
-msgid ""
-"This life path favors association and marriage. Affection and friendship are "
-"sought. It symbolizes a certain passivity and there is sometimes a tendency "
-"to live according to events. There are many twists and turns and success "
-"comes with time unless it comes unexpectedly with the help of others.\n"
-"Requirements: The qualities needed to successfully take on this life path "
-"are: diplomacy, patience and balance.\n"
-"Challenges: This path is difficult for those who have 2 as a missing digit, "
-"and the expression numbers 1, 5, 9, 11 and 22."
-msgstr ""
-"Ce chemin de vie favorise l’association et le mariage. On y recherche "
-"l’affection et l’amitié. Il symbolise une certaine passivité et il y a "
-"parfois une tendance à vivre au gré des évènements. Il comporte beaucoup de "
-"virages et la réussite vient avec le temps à moins qu’elle ne vienne de "
-"façon inattendue grâce à l’aide d’autrui.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : la "
-"diplomatie, la patience et l’équilibre.\n"
-"Ce chemin est difficile pour ceux qui ont 2 comme chiffre manquant, et les "
-"nombres d’expression 1, 5, 9, 11 et 22."
-
-#: pythagorean/meanings/life_path.py:23
-msgid "Life of creativity and expression"
-msgstr "Vie de créativité et d’expression"
-
-#: pythagorean/meanings/life_path.py:25
-msgid ""
-"This life path favors contact activities and relationships with others. It "
-"symbolizes a pleasant and sociable life with few obstacles and the "
-"possibility of achieving success fairly quickly (and sometimes brilliantly). "
-"Those who show creativity, ingenuity and drive in business are happy and "
-"successful on this path.\n"
-"Requirements: The qualities necessary to successfully take on this life path "
-"are: extroversion, a sense of relationships and contacts and ambition.\n"
-"Challenges: This path is difficult for those who have 3 as the missing "
-"number, and the number of expression 4."
-msgstr ""
-"Ce chemin de vie favorise les activités de contacts et les relations avec "
-"autrui. Il symbolise une vie plaisante et sociable comportant peu "
-"d’obstacles et la possibilité de réussir assez rapidement (et parfois "
-"brillamment). Ceux qui font preuves de créativité, d’ingéniosité et d’allant "
-"dans les entreprises évoluent avec bonheur et succès sur ce chemin.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : "
-"l’extraversion, le sens des relations et des contacts et l’ambition.\n"
-"Ce chemin est difficile pour ceux qui ont 3 comme chiffre manquant, et le "
-"nombre d’expression 4."
-
-#: pythagorean/meanings/life_path.py:29
-msgid "Life of work and construction"
-msgstr "Vie de travail et de construction"
-
-#: pythagorean/meanings/life_path.py:31
-msgid ""
-"This life path promotes success through hard work and steady effort. It "
-"symbolizes stable and serious endeavors and generally allows for solid "
-"success, even if progress is slow. It involves few risks, but lacks a "
-"certain fantasy and nothing is gained easily.\n"
-"Requirements: The qualities necessary to assume this path of life are: love "
-"of work well done, regularity, rigor and perseverance.\n"
-"Challenges: This path is difficult for those who have 4 as the missing "
-"number, and the expression numbers 1, 3, 5, 8 and 11."
-msgstr ""
-"Ce chemin de vie favorise le succès par le travail et les efforts réguliers. "
-"Il symbolise les entreprises stables et sérieuses et permet généralement une "
-"réussite solide, même si l’évolution se fait lentement. Il comporte peu de "
-"risques, mais manque d’une certaine fantaisie et rien n’est acquis par la "
-"facilité.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : l’amour "
-"du travail bien fait, la régularité, la rigueur et la persévérance.\n"
-"Ce chemin est difficile pour ceux qui ont 4 comme chiffre manquant, et les "
-"nombres d’expression 1, 3, 5, 8 et 11."
-
-#: pythagorean/meanings/life_path.py:35
-msgid "Life of mobility and change"
-msgstr "Vie de mobilité et de changements"
-
-#: pythagorean/meanings/life_path.py:37
-msgid ""
-"This life path favors changes in all areas of life. Life undergoes frequent "
-"transformations.  It symbolizes travel, physical activity and personal "
-"freedom; sometimes adventure. It promises an exciting life full of "
-"unexpected events, but it also involves risks, as well as the threat of "
-"accidents.\n"
-"Requirements: The qualities needed to successfully take on this path of life "
-"are: flexibility, adaptability as well as boldness and health (moral and "
-"physical).\n"
-"Challenges: This path is difficult for those who have 5 as the missing "
-"number, and the expression numbers 2, 4 and 6."
-msgstr ""
-"Ce chemin de vie favorise les changements dans tous les domaines de "
-"l’existence. La vie connaît des transformations fréquentes.  Il symbolise "
-"les voyages, les activités physiques et la liberté personnelle; parfois "
-"l’aventure. Il promet une vie passionante et riche d’évènements imprévus, "
-"mais il comporte aussi des risques, ainsi que des menaces d’accidents.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : la "
-"souplesse, l’adaptation ainsi que let l’audace et la santé (morale et "
-"physique).\n"
-"Ce chemin est difficile pour ceux qui ont 5 comme chiffre manquant, et les "
-"nombres d’expression 2, 4 et 6."
-
-#: pythagorean/meanings/life_path.py:41
-msgid "A life of responsibility and emotional harmony"
-msgstr "Vie de responsabilité et d’harmonie sentimentale"
-
-#: pythagorean/meanings/life_path.py:43
-msgid ""
-"This life path involves choices to be made and it is not always easy to move "
-"in the right direction. If the chosen path is positive and ambitious, the "
-"ascent is rapid and leads far and high. If not, there is hesitation in "
-"several directions, the consequences of which are rarely beneficial. It "
-"symbolizes responsibilities that can also turn into burdens or trials. It is "
-"also the path of love and marriage as the 6 is home and family.\n"
-"Requirements: The qualities needed to take on this life path are: willpower "
-"(because free will is predominant on this path), a spirit of conciliation "
-"and adaptation. There is a natural tendency to perfectionism which can cause "
-"problems.\n"
-"Challenges: This path is difficult for those who have 6 as the missing "
-"number, and the expression number 5."
-msgstr ""
-"Ce chemin de vie implique des choix à faire et il n’est pas toujours facile "
-"de s’engager dans la bonne direction. Si la voie choisie est positive et "
-"ambitieuse, l’ascension est rapide et mène loin et haut. Sinon, il y a des "
-"hésitations dans plusieurs directions dont les conséquences sont rarement "
-"bénéfiques. Il symbolise les responsabilités qui peuvent aussi se "
-"transformer en fardeaux ou en épreuves. Il est également le chemin de "
-"l’amour et du mariage car le 6 est foyer et famille.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : la "
-"volonté (car le libre-arbitre est prédominant sur ce chemin), l’esprit de "
-"conciliation et d’adaptation. Il y a une tendance naturelle au "
-"perfectionnisme qui risque de poser des problèmes.\n"
-"Ce chemin est difficile pour ceux qui ont 6 comme chiffre manquant, et le "
-"nombre d’expression 5."
-
-#: pythagorean/meanings/life_path.py:47
-msgid "Inner life and independence"
-msgstr "Vie intérieure et indépendance"
-
-#: pythagorean/meanings/life_path.py:49
-msgid ""
-"This life path favors the work of the mind, the inner or spiritual life and "
-"everything that has to do with analysis or research. It symbolizes the taste "
-"for independence and sometimes solitude. It often characterizes an original "
-"destiny, with a selfless success. Friendships are a source of great "
-"satisfaction, but marriage is not always easy.\n"
-"Requirements: The qualities necessary to take on this path of life are: "
-"interest in others, reflection and disinterestedness in the material aspects "
-"of life.\n"
-"Challenges: This path is difficult for those who have 7 as the missing "
-"number (delays and delays in achievements), and the expression numbers 8, 11 "
-"and 22."
-msgstr ""
-"Ce chemin de vie favorise les travaux de l’esprit, la vie intérieur ou "
-"spirituelle et tout ce qui a un rapport avec l’analyse ou la recherche. Il "
-"symbolise le goüt de l’indépendance et parfois de la solitude. Il "
-"caractérise souvent une destinée originale, avec une réussite désintéressée. "
-"Les amitiés sont source de grandes satisfactions, mais le mariage n’est pas "
-"toujours facile.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : l’intérêt "
-"pour autrui, la réfléxion et le désintéressement pour ce qui concerne les "
-"aspects matériels de l’existance.\n"
-"Ce chemin est difficile pour ceux qui ont 7 comme chiffre manquant (retards "
-"et délais dans les réalisations), et les nombres d’expression 8, 11 et 22."
-
-#: pythagorean/meanings/life_path.py:53
-msgid "Life of ambitious achievements and material acquisitions"
-msgstr "Vie de réalisations ambitieuses et d’acquisitions matérielles"
-
-#: pythagorean/meanings/life_path.py:55
-msgid ""
-"This life path favors ambitions and large-scale achievements. It symbolizes "
-"power, money and materiality. It is difficult because it involves risks and "
-"trials but it can lead to extraordinary success. It is not free from "
-"accidents and health problems.\n"
-"Requirements: The qualities needed to take on this path of life are: "
-"courage, endurance and a sense of balance.\n"
-"Challenges: This path is difficult for those who have 8 as the missing "
-"number, and the expression numbers 4 and 7. The 2s and 9s are not always at "
-"ease."
-msgstr ""
-"Ce chemin de vie favorise les ambitions et les réalisations d’envergure. Il "
-"symbolise le pouvoir, l’argent et la matérialité. Il est difficile car il "
-"comporte des risques et des épreuves mais il peut mener à une réussite "
-"extraordinaire. Il ‘est pas exempts d’accidents et de problèmes de santé.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : le "
-"courage, l’endurance et le sens de l’équilibre.\n"
-"Ce chemin est difficile pour ceux qui ont 8 comme chiffre manquant, et les "
-"nombres d’expression 4 et 7. Les 2 et 9 n’y sont pas toujours à l’aise"
-
-#: pythagorean/meanings/life_path.py:59
-msgid "Life of escape or ideal"
-msgstr "Vie d'évasion ou d'idéal"
-
-#: pythagorean/meanings/life_path.py:61
-msgid ""
-"This life path favors journeys: those of the spirit or of the soul, and "
-"those that one can undertake on the planet. It promises many encounters and "
-"varied experiences. It symbolizes the search for an ideal or the realization "
-"of a vocation. It involves a lot of emotions and success often manifests "
-"itself in an unexpected way, not without pitfalls and obstacles.\n"
-"Requirements: The qualities necessary to successfully take on this life path "
-"are: understanding and dedication, sensitivity and an open mind, as well as "
-"courage. Sometimes it is necessary to overcome a tendency to dreams and "
-"illusions.\n"
-"Challenges: This path is difficult for those who have 9 as the missing "
-"number, and the expression numbers 2 and 8."
-msgstr ""
-"Ce chemin de vie favorise les voyages : ceux de l’esprit ou de l’âme, et "
-"ceux que l’on peut entreprendre sur la planète. Il promet beaucoup de "
-"rencontres et d’expériences variées. Il symbolise la recherche d’un idéal ou "
-"la réalisation d’une vocation. Il comporte beaucoup d’émotions et la "
-"réussite se manifeste souvent de façon imprévue, non sans écueils et sans "
-"obstacles.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : la "
-"compréhension et le dévouement, la sensibilité et un esprit ouvert, ainsi "
-"que le courage. Parfois il faut vaincre une tendance aux rêves et aux "
-"illusions.\n"
-"Ce chemin est difficile pour ceux qui ont 9 comme chiffre manquant, et les "
-"nombres d’expression 2 et 8."
-
-#: pythagorean/meanings/life_path.py:65
-msgid "Life of inspiration and mastery"
-msgstr "Vie d’inspiration et de maîtrise"
-
-#: pythagorean/meanings/life_path.py:67
-msgid ""
-"This life path favors the achievement of ambitious or original "
-"accomplishments. It symbolizes inspiration, intelligence and leadership. It "
-"is not an easy path to live because the vibrations are strong and do not "
-"tolerate limitations or restrictions. Sometimes it brings great success "
-"followed by a collapse that forces you to start all over again.\n"
-"Requirements: The qualities necessary to assume this life path are: a strong "
-"character and a great will. Tendency to impatience and nervousness that must "
-"be curbed.\n"
-"Challenges: This path is difficult for those who have 1 and 2 as missing "
-"numbers, and the expression numbers 2, 4 and 7."
-msgstr ""
-"Ce chemin de vie favorise l’accomplissement de réalisations ambitieuses ou "
-"originales. Il symbolise l’inspiration, l’intelligence et l’ascendant sur "
-"autrui. Il n’est pas facile à vivre car les vibrations sont fortes et ne "
-"supportent ni les limitations ni les restrictions. Parfois, il apporte une "
-"grande réussite suivie d’un écroulement qui oblige à tout recommencer.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : un "
-"caractère fort et une grande volonté. Tendance à l’impatience et à la "
-"nervosité qu’il faut freiner.\n"
-"Ce chemin est difficile pour ceux qui ont 1 et 2 comme chiffres manquants, "
-"et les nombres d’expression 2, 4 et 7."
-
-#: pythagorean/meanings/life_path.py:71
-msgid "Life of significant achievement"
-msgstr "Vie d’accomplissements importants"
-
-#: pythagorean/meanings/life_path.py:73
-msgid ""
-"This life path favors high level projects that may be of interest to a "
-"community, a country or even the world. It symbolizes superior intelligence "
-"and universal interest. There is little room for personal and daily "
-"existence because it implies an overflowing activity. There is a great "
-"desire to build for others at the base of this master number.\n"
-"Requirements: The qualities necessary to take on this life path are: a great "
-"humanism, the ability to carry out great projects, the power to concretely "
-"realize sometimes utopian ambitions... exceptional qualities.\n"
-"Challenges: This path is difficult for those who have 4 as the missing "
-"number, and the expression numbers 2, 4 and 7."
-msgstr ""
-"Ce chemin de vie favorise les projets de haut niveau qui interessent parfois "
-"une collectivité, un pays voire le monde. Il symbolise l’intelligence "
-"supérieure et un intérêt universel. Il y a peu de place pour l’existance "
-"personnelle et quotidienne car il implique une activité débordante. Il y a "
-"un grand désir de construction pour autrui à la base de ce maître-nombre.\n"
-"Les qualités nécessaires pour bien assumer ce chemin de vie sont : une grand "
-"humanisme, la possibilité de mener à bien de grands projets, le pouvoir de "
-"réaliser concrètement des ambitions parfois utopiques… des qualités "
-"exceptionnelles.\n"
-"Ce chemin est difficile pour ceux qui ont 4 comme chiffre manquant, et les "
-"nombres d’expression 2, 4 et 7."
-
-#: pythagorean/numerology.py:113
+#: pythagorean.py:135
 msgid "KEY FIGURES:"
-msgstr "CHIFFRES CLES :"
+msgstr ""
 
-#: pythagorean/numerology.py:115
+#: pythagorean.py:137
 msgid "INTERPRETATIONS:"
-msgstr "INTERPRETATIONS :"
+msgstr ""
+
+#: pythagorean.py:177
+msgid "Invalid names supplied."
+msgstr ""
+
+#: pythagorean_interpretation.py:35
+msgid "hearth_desire_number_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:36
+msgid "hearth_desire_number_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:39
+msgid "hearth_desire_number_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:40
+msgid "hearth_desire_number_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:43
+msgid "hearth_desire_number_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:44
+msgid "hearth_desire_number_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:47
+msgid "hearth_desire_number_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:48
+msgid "hearth_desire_number_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:51
+msgid "hearth_desire_number_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:52
+msgid "hearth_desire_number_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:55
+msgid "hearth_desire_number_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:56
+msgid "hearth_desire_number_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:59
+msgid "hearth_desire_number_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:60
+msgid "hearth_desire_number_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:63
+msgid "hearth_desire_number_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:64
+msgid "hearth_desire_number_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:67
+msgid "hearth_desire_number_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:68
+msgid "hearth_desire_number_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:71
+msgid "hearth_desire_number_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:72
+msgid "hearth_desire_number_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:75
+msgid "hearth_desire_number_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:76
+msgid "hearth_desire_number_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:82
+msgid "personality_number_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:83
+msgid "personality_number_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:86
+msgid "personality_number_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:87
+msgid "personality_number_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:90
+msgid "personality_number_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:91
+msgid "personality_number_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:94
+msgid "personality_number_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:95
+msgid "personality_number_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:98
+msgid "personality_number_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:99
+msgid "personality_number_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:102
+msgid "personality_number_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:103
+msgid "personality_number_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:106
+msgid "personality_number_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:107
+msgid "personality_number_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:110
+msgid "personality_number_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:111
+msgid "personality_number_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:114
+msgid "personality_number_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:115
+msgid "personality_number_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:118
+msgid "personality_number_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:119
+msgid "personality_number_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:122
+msgid "personality_number_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:123
+msgid "personality_number_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:129
+msgid "destiny_number_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:130
+msgid "destiny_number_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:133
+msgid "destiny_number_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:134
+msgid "destiny_number_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:137
+msgid "destiny_number_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:138
+msgid "destiny_number_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:141
+msgid "destiny_number_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:142
+msgid "destiny_number_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:145
+msgid "destiny_number_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:146
+msgid "destiny_number_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:149
+msgid "destiny_number_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:150
+msgid "destiny_number_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:153
+msgid "destiny_number_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:154
+msgid "destiny_number_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:157
+msgid "destiny_number_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:158
+msgid "destiny_number_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:161
+msgid "destiny_number_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:162
+msgid "destiny_number_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:165
+msgid "destiny_number_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:166
+msgid "destiny_number_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:169
+msgid "destiny_number_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:170
+msgid "destiny_number_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:176
+msgid "expression_number_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:177
+msgid "expression_number_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:180
+msgid "expression_number_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:181
+msgid "expression_number_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:184
+msgid "expression_number_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:185
+msgid "expression_number_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:188
+msgid "expression_number_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:189
+msgid "expression_number_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:192
+msgid "expression_number_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:193
+msgid "expression_number_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:196
+msgid "expression_number_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:197
+msgid "expression_number_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:200
+msgid "expression_number_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:201
+msgid "expression_number_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:204
+msgid "expression_number_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:205
+msgid "expression_number_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:208
+msgid "expression_number_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:209
+msgid "expression_number_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:212
+msgid "expression_number_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:213
+msgid "expression_number_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:216
+msgid "expression_number_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:217
+msgid "expression_number_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:223
+msgid "active_number_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:224
+msgid "active_number_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:227
+msgid "active_number_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:228
+msgid "active_number_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:231
+msgid "active_number_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:232
+msgid "active_number_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:235
+msgid "active_number_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:236
+msgid "active_number_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:239
+msgid "active_number_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:240
+msgid "active_number_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:243
+msgid "active_number_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:244
+msgid "active_number_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:247
+msgid "active_number_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:248
+msgid "active_number_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:251
+msgid "active_number_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:252
+msgid "active_number_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:255
+msgid "active_number_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:256
+msgid "active_number_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:259
+msgid "active_number_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:260
+msgid "active_number_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:263
+msgid "active_number_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:264
+msgid "active_number_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:270
+msgid "legacy_number_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:271
+msgid "legacy_number_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:274
+msgid "legacy_number_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:275
+msgid "legacy_number_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:278
+msgid "legacy_number_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:279
+msgid "legacy_number_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:282
+msgid "legacy_number_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:283
+msgid "legacy_number_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:286
+msgid "legacy_number_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:287
+msgid "legacy_number_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:290
+msgid "legacy_number_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:291
+msgid "legacy_number_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:294
+msgid "legacy_number_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:295
+msgid "legacy_number_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:298
+msgid "legacy_number_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:299
+msgid "legacy_number_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:302
+msgid "legacy_number_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:303
+msgid "legacy_number_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:306
+msgid "legacy_number_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:307
+msgid "legacy_number_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:310
+msgid "legacy_number_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:311
+msgid "legacy_number_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:317
+msgid "life_path_number_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:318
+msgid "life_path_number_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:321
+msgid "life_path_number_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:322
+msgid "life_path_number_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:325
+msgid "life_path_number_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:326
+msgid "life_path_number_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:329
+msgid "life_path_number_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:330
+msgid "life_path_number_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:333
+msgid "life_path_number_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:334
+msgid "life_path_number_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:337
+msgid "life_path_number_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:338
+msgid "life_path_number_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:341
+msgid "life_path_number_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:342
+msgid "life_path_number_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:345
+msgid "life_path_number_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:346
+msgid "life_path_number_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:349
+msgid "life_path_number_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:350
+msgid "life_path_number_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:353
+msgid "life_path_number_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:354
+msgid "life_path_number_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:357
+msgid "life_path_number_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:358
+msgid "life_path_number_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:364
+msgid "life_path_number_alternative_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:365
+msgid "life_path_number_alternative_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:368
+msgid "life_path_number_alternative_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:369
+msgid "life_path_number_alternative_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:372
+msgid "life_path_number_alternative_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:373
+msgid "life_path_number_alternative_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:376
+msgid "life_path_number_alternative_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:377
+msgid "life_path_number_alternative_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:380
+msgid "life_path_number_alternative_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:381
+msgid "life_path_number_alternative_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:384
+msgid "life_path_number_alternative_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:385
+msgid "life_path_number_alternative_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:388
+msgid "life_path_number_alternative_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:389
+msgid "life_path_number_alternative_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:392
+msgid "life_path_number_alternative_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:393
+msgid "life_path_number_alternative_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:396
+msgid "life_path_number_alternative_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:397
+msgid "life_path_number_alternative_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:400
+msgid "life_path_number_alternative_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:401
+msgid "life_path_number_alternative_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:404
+msgid "life_path_number_alternative_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:405
+msgid "life_path_number_alternative_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:411
+msgid "power_number_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:412
+msgid "power_number_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:415
+msgid "power_number_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:416
+msgid "power_number_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:419
+msgid "power_number_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:420
+msgid "power_number_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:423
+msgid "power_number_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:424
+msgid "power_number_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:427
+msgid "power_number_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:428
+msgid "power_number_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:431
+msgid "power_number_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:432
+msgid "power_number_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:435
+msgid "power_number_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:436
+msgid "power_number_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:439
+msgid "power_number_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:440
+msgid "power_number_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:443
+msgid "power_number_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:444
+msgid "power_number_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:447
+msgid "power_number_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:448
+msgid "power_number_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:451
+msgid "power_number_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:452
+msgid "power_number_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:458
+msgid "power_number_alternative_1_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:459
+msgid "power_number_alternative_1_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:462
+msgid "power_number_alternative_2_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:463
+msgid "power_number_alternative_2_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:466
+msgid "power_number_alternative_3_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:467
+msgid "power_number_alternative_3_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:470
+msgid "power_number_alternative_4_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:471
+msgid "power_number_alternative_4_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:474
+msgid "power_number_alternative_5_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:475
+msgid "power_number_alternative_5_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:478
+msgid "power_number_alternative_6_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:479
+msgid "power_number_alternative_6_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:482
+msgid "power_number_alternative_7_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:483
+msgid "power_number_alternative_7_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:486
+msgid "power_number_alternative_8_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:487
+msgid "power_number_alternative_8_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:490
+msgid "power_number_alternative_9_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:491
+msgid "power_number_alternative_9_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:494
+msgid "power_number_alternative_11_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:495
+msgid "power_number_alternative_11_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:498
+msgid "power_number_alternative_22_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:499
+msgid "power_number_alternative_22_description"
+msgstr ""
+
+#: pythagorean_interpretation.py:537
+msgid "hearth_desire_number_title"
+msgstr ""
+
+#: pythagorean_interpretation.py:538
+msgid "hearth_desire_number_description"
+msgstr ""
