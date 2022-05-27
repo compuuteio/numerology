@@ -1,20 +1,17 @@
-from dataclasses import dataclass
-from typing import Dict, List
-from .numerology import Numerology
-from .key_figure import KeyFigure
+from abc import ABC, abstractmethod
+from typing import Union, List, Dict
+from .key_figures import KeyFigures
 
 
-@dataclass
-class Interpretation:
-    def __init__(self, numerology: Numerology, key_figures: List[KeyFigure]):
-        self._key_figures: List[KeyFigure] = key_figures
-        self._numerology: Numerology = numerology_type
-        self._meanings: Dict = {}
+class Interpretation(ABC):
+    def __init__(self, key_figures):
+        self._key_figures: KeyFigures = key_figures
+        self._interpretation: Dict = {}
+        self._set_interpretations()
 
-    @property
-    def meanings(self):
-        return self._meanings
+    @abstractmethod
+    def _set_interpretations(self):
+        ...
 
-    @property
-    def meaning(self, key: str):
-        return self._meanings.get(key)
+    def get(self):
+        return self._interpretation

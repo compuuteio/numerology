@@ -5,6 +5,9 @@ from typing import Dict, List, Union
 class KeyFigures:
     _key_figures: Dict[str, Union[None, int, List[int], str, List[str]]] = {}
 
+    def __init__(self):
+        ...
+
     def __iter__(self):
         for k, v in self._key_figures.items():
             yield (k, v)
@@ -16,9 +19,8 @@ class KeyFigures:
     def all(self) -> Dict:
         return self._key_figures
 
-    @property
     def get(self, key: str) -> Union[None, int, List[int], str, List[str]]:
-        return self._key_figures.get(key=key)
+        return self._key_figures.get(key)
 
 
 if __name__ == "__main__":
@@ -26,3 +28,4 @@ if __name__ == "__main__":
     # test = KeyFigures()
     # test.set("a_key", "a_value")
     # print(f"{[t for t in test]}")
+    # test.get(key="a_key")

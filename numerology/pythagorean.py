@@ -8,6 +8,28 @@ from typing import Dict, List, Optional, Tuple
 
 from .common.num_utils import NumUtils as fct
 from .numerology import Numerology
+from .pythagorean_interpretation import PythagoreanInterpretation
+
+localedir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "locale")
+
+default_lang = "en"
+try:
+    locale_lang, encoding = locale.getlocale()
+    lang = locale_lang.split("_")[0] if locale_lang else default_lang
+except:
+    # If unable to get the locale language, use English
+    lang = default_lang
+try:
+    language = gettext.translation(
+        "numerology", localedir=localedir_path, languages=[lang]
+    )
+except:
+    # If the current language does not have a translation, the default laguage (English) will be used English
+    language = gettext.translation(
+        "numerology", localedir=localedir_path, languages=[default_lang]
+    )
+language.install()
+_ = language.gettext
 
 
 class Pythagorean(Numerology):
@@ -97,6 +119,7 @@ class Pythagorean(Numerology):
         birthdate: Optional[str] = None,
         verbose: bool = True,
     ):
+        super().__init__()
         self.first_name = first_name
         self.last_name = last_name
         self.birthdate = birthdate
@@ -106,13 +129,13 @@ class Pythagorean(Numerology):
         if self.names_are_valid:
             self.init_inner_variables()
             self.set_key_figures()
-            # self._interpretations = Interpretations(key_figures=self.key_figures)
+            self.interpretations = PythagoreanInterpretation(self._key_figures)
 
         if self.verbose and self.names_are_valid:
             print(_("KEY FIGURES:"))
             fct.print_beautiful_dict(dictionary=self._key_figures.all)
             print(_("INTERPRETATIONS:"))
-            # fct.print_beautiful_dict(dictionary=self.interpretations.meanings)
+            fct.print_beautiful_dict(dictionary=self.interpretations.get())
 
     # ABSTRACT CLASS METHOD
     def get_numerology_sum(
@@ -474,4 +497,4 @@ class Pythagorean(Numerology):
 
 if __name__ == "__main__":
     ...
-    test = Pythagorean(first_name="first_name", last_name="last_name", verbose=True)
+    # test = Pythagorean(first_name="first_name", last_name="last_name", verbose=True)
