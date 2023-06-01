@@ -13,7 +13,7 @@ poetry.lock
 
 # Quick test files and old folders
 test.py
-old
+old/
 
 # vim
 *.swo
@@ -22,5 +22,9 @@ old
 # lint
 1/
 
+# IDE
 .vscode/
+.idea/
+
+# Virtual environment
 .venv/

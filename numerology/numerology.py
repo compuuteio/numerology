@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from typing import List
 import os
 import gettext
+import locale
 
 from .key_figures import KeyFigures
 
