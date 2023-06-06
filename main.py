@@ -1,5 +1,5 @@
 from numerology import Pythagorean
-
+from numerology import Chaldean
 
 def start_app():
     """Interactive version of the package."""
@@ -10,7 +10,7 @@ def start_app():
     birthdate = input("Enter your birthdate (yyyy-MM-dd, example 1994-11-30): ")
 
     Pythagorean(first_name, last_name, birthdate)
-
+    Chaldean(first_name, last_name, birthdate)
 
 if __name__ == "__main__":
     start_app()
