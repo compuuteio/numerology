@@ -10,7 +10,7 @@ from numerology.utilities.string_handler import (
 )
 
 
-class TestUtilitiesStringHandling(unittest.TestCase):
+class TestUtilitiesStringHandler(unittest.TestCase):
     def setUp(self) -> None:
         self.alphabet_str = "abcdefghijklmnopqrstuvwxyz"
         self.alphabet_dict = {"a": 1, "b": 2, "c": 3}
