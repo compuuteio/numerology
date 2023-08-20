@@ -2,6 +2,7 @@ import gettext
 import logging
 import math
 import os
+import locale
 import sys
 from collections import Counter
 from typing import Dict, Optional, Tuple

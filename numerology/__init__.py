@@ -10,7 +10,8 @@ localedir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "loca
 
 from pythagorean.common import Functions as fct
 from pythagorean.numerology import Numerology as Pythagorean
-
+from chaldean.numerology import CNumerology as Chaldean
+from vedic.numerology import VNumerology as Vedic
 
 assert sys.version_info[0] == 3, "Numerology requires Python 3."
 
