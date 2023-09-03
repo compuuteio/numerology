@@ -1,7 +1,7 @@
 from enum import IntEnum
 
 
-class NumerologyNumber(IntEnum):
+class Value(IntEnum):
     """Key figure value."""
 
     ONE: int = 1

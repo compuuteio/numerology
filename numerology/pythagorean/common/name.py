@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class NumerologyField(Enum):
+class Name(StrEnum):
     ACTIVE_NUMBER = "Active number"
     DESTINY_NUMBER = "Destiny number"
     EXPRESSION_NUMBER = "Expression number"
@@ -13,6 +13,10 @@ class NumerologyField(Enum):
 
     def __str__(self):
         return self.value
+
+    @classmethod
+    def values(cls) -> list:
+        return [element.value for element in cls]
 
 
 if __name__ == "__main__":

@@ -1,3 +1,3 @@
+from .common.name import Name
+from .common.value import Value
 from .numerology_element import NumerologyElement
-from .numerology_field import NumerologyField
-from .numerology_number import NumerologyNumber

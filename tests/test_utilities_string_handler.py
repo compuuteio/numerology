@@ -31,7 +31,7 @@ class TestUtilitiesStringHandler(unittest.TestCase):
         self.assertEqual(
             expected_output,
             clean_string(
-                string="Il a lancé la balle comme ça", alphabet=self.alphabet_str
+                string="Il a lancé la balle comme ça", filter=self.alphabet_str
             ),
         )
 

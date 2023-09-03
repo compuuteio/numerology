@@ -19,5 +19,6 @@ class TestUtilitiesDateHandler(unittest.TestCase):
         self.assertFalse(is_a_valid_pythagorean_date(date="2023-02-30"))
         self.assertFalse(is_a_valid_pythagorean_date(date="2023-15-15"))
 
+
 if __name__ == "__main__":
     unittest.main()
