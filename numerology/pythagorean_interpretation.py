@@ -29,7 +29,6 @@ _ = language.gettext
 
 
 class PythagoreanInterpretation(Interpretation):
-
     hearth_desire_number: Dict = {
         1: {
             "title": _("hearth_desire_number_1_title"),
@@ -514,7 +513,6 @@ class PythagoreanInterpretation(Interpretation):
     }
 
     def _set_interpretations(self):
-
         for key, value in self._key_figures.all.items():
             if self.available_interpretations.get(key):
                 self._interpretation[key] = {

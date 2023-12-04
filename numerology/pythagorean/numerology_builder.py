@@ -1,7 +1,7 @@
 from typing import Dict
 
+from .common.name import NumerologyField
 from .numerology_element import NumerologyElement
-from .numerology_field import NumerologyField
 
 
 class NumerologyBuilder:

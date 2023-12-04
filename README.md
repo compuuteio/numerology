@@ -8,18 +8,15 @@ Currently, you can have the life path interpretation in French and English, depe
 
 ## 2. Installation
 
-```shell
-# Option 1: pip
+``` shell
 pip install numerology
-
-# Option 2: Download the numerology folder on GitHub and add it to your work folder.
 ```
 
 ## 3. How to use it
 
 ### 3.1. Get full numerology
 
-```python
+``` python
 # Import
 from numerology import Pythagorean
 
@@ -35,7 +32,7 @@ You could chose to either get the key figures, to link it to your own interpreta
 
 ### 3.1. Get key figures only
 
-```python
+``` python
 from numerology import Pythagorean
 
 num = Pythagorean(first_name="Barack", last_name="Obama", birthdate="1961-08-04", verbose=False)
@@ -44,7 +41,7 @@ print(num.key_figures)
 
 The example above should give something like this:
 
-```python
+``` python
 {
     "first_name": "Barack",
     "last_name": "Obama",
@@ -81,7 +78,7 @@ The example above should give something like this:
 
 ### 3.2. Get the available interpretations
 
-```python
+``` python
 from numerology import Pythagorean
 
 num = Pythagorean(first_name="Barack", last_name="Obama", birthdate="1961-08-04", verbose=False)
@@ -90,7 +87,7 @@ print(num.interpretations)
 
 The example above should give something like this:
 
-```python
+``` python
 {
     "first_name": "Barack",
     "last_name": "Obama",

@@ -11,7 +11,7 @@ repository = "https://github.com/compuuteio/numerology"
 documentation = "https://github.com/compuuteio/numerology/README.md"
 keywords = ["numerology", "pythagorean", "vedic", "clairvoyance", "voyance"]
 classifiers = [
-    "Programming Language :: Python :: 3.8", 
+    "Programming Language :: Python :: 3.11", 
     "Topic :: Games/Entertainment :: Fortune Cookies",
     "Topic :: Religion",
     "Topic :: Scientific/Engineering :: Mathematics"
@@ -19,18 +19,21 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = "^3.8"
-
-[tool.poetry.dev-dependencies]
-pytest = "^5.2"
-robot = "^20071211"
-black = {version = "^22.3.0", allow-prereleases = true}
+python = "^3.11"
 
 [tool.poetry.scripts]
 main = "main:start_app"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/compuuteio/numerology/issues"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.4.1"
+black = "^23.7.0"
+isort = "^5.12.0"
+
+[tool.isort]
+profile = "black" 
 
 [build-system]
 requires = ["poetry>=0.12"]

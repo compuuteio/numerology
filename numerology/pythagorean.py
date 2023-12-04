@@ -253,7 +253,6 @@ class Pythagorean(Numerology):
 
         # Birthdate elements (as birthdate is optional)
         if self.birthdate_is_valid:
-
             self._key_figures.set(key="birthdate", value=self.birthdate)
             self._key_figures.set(key="life_path_number", value=self.life_path_number)
 

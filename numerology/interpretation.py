@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Union, List, Dict
+from typing import Dict, List, Union
+
 from .key_figures import KeyFigures
 
 
