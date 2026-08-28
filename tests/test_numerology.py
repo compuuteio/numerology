@@ -4,9 +4,10 @@ import sys
 # # For relative imports to work in Python 3.6
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
 
-# from numerology import __version__, Pythagorean
-from numerology import Pythagorean
+# Import from legacy module for backward compatibility tests
 import unittest
+
+from numerology.legacy.pythagorean.old_numerology import Numerology as Pythagorean
 
 # Use the command below to run tests
 # python3 -m unittest tests/test_numerology.py
@@ -33,8 +34,8 @@ class PythagoreanTestCase(unittest.TestCase):
     def test_birthday(self):
         self.assertEqual("1958-12-15", self.name1.key_figures["birthdate"])
 
-    def test_hearth_desire_number(self):
-        self.assertEqual(1, self.name1.key_figures["hearth_desire_number"])
+    def test_heart_desire_number(self):
+        self.assertEqual(1, self.name1.key_figures["heart_desire_number"])
 
     def test_personality_number(self):
         self.assertEqual(7, self.name1.key_figures["personality_number"])

@@ -1,128 +1,93 @@
 # Numerology
 
-## 1. About
+Numerology 2 is an extensible, dependency-free Python 3.12+ library for
+numerology systems. Its public API is functional, deterministic, and typed.
+Pythagorean numerology is the first available system; other systems will live
+in their own namespaces as they are implemented.
 
-A simple multilanguage numerology tool to have fun with friends.
-The interpretations are not fully implemented yet but the mechanism to get them is fully operational.
-Currently, you can have the life path interpretation in French and English, depending on your OS language.
+> Numerology is provided for entertainment. It is not a scientific or
+> professional decision-making tool.
 
-## 2. Installation
+## Installation
 
 ```shell
-# Option 1: pip
 pip install numerology
-
-# Option 2: Download the numerology folder on GitHub and add it to your work folder.
 ```
 
-## 3. How to use it
+Version `2.0.0a1` is an alpha release. Pin the version when using it in an
+application.
 
-### 3.1. Get full numerology
+## Functional API
 
 ```python
-# Import
-from numerology import Pythagorean
+from numerology import pythagorean
 
-# Birthdate format: yyyy-mm-dd
-# Birthdate is optional to let you have a partial numerology if that information is missing.
-my_numerology = PythagoreanNumerology("First name", "Last name", "Birthdate")
-
-# Example:
-his_numerology = Pythagorean("Barrack", "Obama", "1961-08-04")
+reading = pythagorean.full_reading("Barack", "Obama", "1961-08-04")
+print(reading["life_path"])
+print(reading["life_path_interpretation"]["description"])
 ```
 
-You could chose to either get the key figures, to link it to your own interpretations, or get the available interpretations.
-
-### 3.1. Get key figures only
+Individual calculations and interpretations can be imported directly:
 
 ```python
-from numerology import Pythagorean
+from numerology.pythagorean import destiny_number, interpret_destiny_number
 
-num = Pythagorean(first_name="Barack", last_name="Obama", birthdate="1961-08-04", verbose=False)
-print(num.key_figures)
+number = destiny_number("Ada", "Lovelace")
+interpretation = interpret_destiny_number(number)
 ```
 
-The example above should give something like this:
+Names are normalized to the ASCII Latin alphabet, accents and punctuation are
+removed, and `y` is treated as a vowel. A birthdate must be a real ISO date in
+`YYYY-MM-DD` format. Destiny and life-path numbers reduce to 1–9; personality
+and heart-desire numbers preserve 11, 22, and 33. A personality or heart-desire
+number may be zero when the normalized name has no applicable letters.
+
+The return contracts are available as `numerology.pythagorean.Interpretation`
+and `numerology.pythagorean.Reading` `TypedDict` definitions.
+
+## Command line
+
+```shell
+numerology Ada Lovelace 1815-12-10
+```
+
+The command writes a JSON reading to standard output.
+
+Runnable examples are available in `examples/pythagorean_demo.py` and
+`examples/legacy_report.py`.
+
+## Legacy API
+
+`numerology.legacy` is deprecated in version 2 and will be removed in version
+3. New applications should use a system namespace such as
+`numerology.pythagorean`.
+
+Version 1 classes remain under an explicit namespace:
 
 ```python
-{
-    "first_name": "Barack",
-    "last_name": "Obama",
-    "birthdate": "1961-08-04",
-    "life_path_number": 2,
-    "life_path_number_alternative": 2,
-    "hearth_desire_number": 1,
-    "personality_number": 22,
-    "destiny_number": 5,
-    "expression_number": 5,
-    "birthdate_day_num": 4,
-    "birthdate_month_num": 8,
-    "birthdate_year_num": 8,
-    "birthdate_year_num_alternative": 7,
-    "active_number": 9,
-    "legacy_number": 5,
-    "power_number": 7,
-    "power_number_alternative": 7,
-    "full_name_numbers": {
-        "1": 4,
-        "2": 3,
-        "9": 1,
-        "3": 1,
-        "6": 1,
-        "4": 1
-    },
-    "full_name_missing_numbers": [
-        5,
-        7,
-        8
-    ]
-}
+from numerology.legacy import Pythagorean
+
+reading = Pythagorean("Barack", "Obama", "1961-08-04", verbose=False)
+print(reading.key_figures)
 ```
 
-### 3.2. Get the available interpretations
+Code that needs v1-compatible functional arithmetic can import adapters from
+`numerology.legacy.functional`. Compatibility behavior is intentionally not a
+flag on the v2 functions.
 
-```python
-from numerology import Pythagorean
+## Development
 
-num = Pythagorean(first_name="Barack", last_name="Obama", birthdate="1961-08-04", verbose=False)
-print(num.interpretations)
+```shell
+uv sync
+uv run pytest
+uv run ruff format .
+uv run ruff check .
+uv run mypy
+uv build
 ```
 
-The example above should give something like this:
+Ruff is the project's only formatter and linter. Run `ruff format` followed by
+`ruff check` after every implementation change.
 
-```python
-{
-    "first_name": "Barack",
-    "last_name": "Obama",
-    "birthdate": "1961-08-04",
-    "life_path_number": {
-        "name": "Life Path Number",
-        "number": "2",
-        "meaning": {
-            "title": "Life of collaboration and harmony with others",
-            "description": "This life path favors association and marriage. Affection and friendship are sought. It symbolizes a certain passivity and there is sometimes a tendency to live according to events. There are many twists and turns and success comes with time unless it comes unexpectedly with the help of others.\nRequirements: The qualities needed to successfully take on this life path are: diplomacy, patience and balance.\nChallenges: This path is difficult for those who have 2 as a missing digit, and the expression numbers 1, 5, 9, 11 and 22."
-        }
-    }
-}
-```
-
-## 4. Future log
-
-Features to implement:
-
-- Interpretations
-- Vedic Numerology implementation (original code by Andrii KRAVCHUK that will be adapted for consistency with the Pythagorean Numerology)
-
-## 5. Special thanks
-
-In the beginning, this code was a simple tool for my friends who were struggling with calculations on paper. I could not imagine it would have gone so far.
-
-A special thanks to:
-
-- Stéphane Y. for the book 'ABC de la numérologie' by Jean-Daniel FERMIER which helped me understand the world of numerology
-- Andrii KRAVCHUK (@yakninja) for transferring his ownership of the PyPi repository to me. That makes the command `pip install numerology` possible for this code
-- Kévin YAUY, PhD. (@kyauy) for letting me see all the potential of Python
-- Jennifer GORWOOD, PhD. for helping for typing the interpretations in French
-- and all the contributors of this project
-
-Have fun!
+The project preserves English and French gettext catalogs for the legacy API;
+the v2 API always returns English text.

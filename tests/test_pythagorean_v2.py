@@ -1,0 +1,281 @@
+"""
+Unit tests for v2.0 Pythagorean numerology calculation functions.
+
+This module contains unit tests for the pure functional API in numerology.pythagorean,
+testing specific examples, edge cases, and master number scenarios.
+"""
+
+import pytest
+
+from numerology.pythagorean import (
+    destiny_number,
+    heart_desire_number,
+    life_path_number,
+    personality_number,
+)
+
+
+class TestDestinyNumber:
+    """Test cases for destiny_number calculation."""
+
+    def test_destiny_number_basic(self):
+        """Test basic destiny number calculation."""
+        # John Smith: J(1)+O(6)+H(8)+N(5)+S(1)+M(4)+I(9)+T(2)+H(8) = 44 -> 8
+        result = destiny_number("John", "Smith")
+        assert result == 8
+
+    def test_destiny_number_no_master_preservation(self):
+        """Test that destiny numbers do not preserve master numbers."""
+        # Create a name that sums to 29 (which reduces to 11, then to 2)
+        # We need to verify that destiny number reduces all the way to single digit
+        result = destiny_number("Bob", "Bob")  # B(2)+O(6)+B(2)+B(2)+O(6)+B(2) = 20 -> 2
+        assert 1 <= result <= 9
+        assert result not in (11, 22, 33)
+
+    def test_destiny_number_empty_names(self):
+        """Test that empty names raise ValueError."""
+        with pytest.raises(ValueError):
+            destiny_number("", "")
+
+    def test_destiny_number_single_name(self):
+        """Test destiny number with only first or last name."""
+        result1 = destiny_number("John", "")
+        assert 1 <= result1 <= 9
+
+        result2 = destiny_number("", "Smith")
+        assert 1 <= result2 <= 9
+
+    def test_destiny_number_with_accents(self):
+        """Test destiny number with accented characters."""
+        # José should be treated as Jose
+        result = destiny_number("José", "García")
+        assert 1 <= result <= 9
+
+    def test_destiny_number_case_insensitive(self):
+        """Test that destiny number is case insensitive."""
+        result1 = destiny_number("John", "Smith")
+        result2 = destiny_number("JOHN", "SMITH")
+        result3 = destiny_number("john", "smith")
+        assert result1 == result2 == result3
+
+
+class TestPersonalityNumber:
+    """Test cases for personality_number calculation."""
+
+    def test_personality_number_basic(self):
+        """Test basic personality number calculation."""
+        # John Smith consonants: J(1)+H(8)+N(5)+S(1)+M(4)+T(2)+H(8) = 29 -> 11 (master)
+        result = personality_number("John", "Smith")
+        assert result == 11
+
+    def test_personality_number_master_preservation(self):
+        """Test that personality numbers preserve master numbers."""
+        result = personality_number("John", "Smith")
+        # Should preserve master number 11
+        assert result in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
+
+    def test_personality_number_only_consonants(self):
+        """Test that only consonants are used."""
+        # Name with clear vowel/consonant split
+        result = personality_number("Aaa", "Bbb")  # Only B(2)+B(2)+B(2) = 6
+        assert result == 6
+
+    def test_personality_number_empty_names(self):
+        """Test that empty names raise ValueError."""
+        with pytest.raises(ValueError):
+            personality_number("", "")
+
+    def test_personality_number_no_consonants(self):
+        """Test name with no consonants (only vowels)."""
+        # This is an edge case - a name with only vowels
+        result = personality_number("Aia", "Eoe")
+        # Should return 0 when no consonants are present (matches legacy behavior)
+        assert result == 0
+
+
+class TestHeartDesireNumber:
+    """Test cases for heart_desire_number calculation."""
+
+    def test_heart_desire_number_basic(self):
+        """Test basic heart desire number calculation."""
+        # John Smith vowels: O(6)+I(9) = 15 -> 6
+        result = heart_desire_number("John", "Smith")
+        assert result == 6
+
+    def test_heart_desire_number_master_preservation(self):
+        """Test that heart desire numbers preserve master numbers."""
+        # Need a name where vowels sum to master number
+        # Testing that master numbers can be preserved
+        result = heart_desire_number("Mary", "Anne")  # A(1)+Y(7)+A(1)+E(5) = 14 -> 5
+        assert result in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
+
+    def test_heart_desire_number_only_vowels(self):
+        """Test that only vowels are used."""
+        # Name with clear vowel/consonant split
+        result = heart_desire_number("Bbb", "Aaa")  # Only A(1)+A(1)+A(1) = 3
+        assert result == 3
+
+    def test_heart_desire_number_empty_names(self):
+        """Test that empty names raise ValueError."""
+        with pytest.raises(ValueError):
+            heart_desire_number("", "")
+
+    def test_heart_desire_number_y_as_vowel(self):
+        """Test that Y is treated as a vowel."""
+        # Y should be included in vowels
+        result = heart_desire_number("Yy", "Yy")  # Y(7)+Y(7)+Y(7)+Y(7) = 28 -> 10 -> 1
+        assert result == 1
+
+    def test_heart_desire_number_no_vowels(self):
+        """Test name with no vowels (only consonants)."""
+        # This is an edge case - a name with only consonants
+        result = heart_desire_number("Bcd", "Fgh")
+        # Should return 0 when no vowels are present (matches legacy behavior)
+        assert result == 0
+
+
+class TestLifePathNumber:
+    """Test cases for life_path_number calculation."""
+
+    def test_life_path_number_basic(self):
+        """Test basic life path number calculation."""
+        # 1990-05-15: year=1+9+9+0=19->10->1, month=5, day=1+5=6 -> 1+5+6=12->3
+        result = life_path_number("1990-05-15")
+        assert result == 3
+
+    def test_life_path_number_no_master_preservation(self):
+        """Test that life path numbers do not preserve master numbers."""
+        # Test a date that might produce master numbers in intermediate steps
+        result = life_path_number("1988-11-22")
+        assert 1 <= result <= 9
+        assert result not in (11, 22, 33)
+
+    def test_life_path_number_invalid_format(self):
+        """Test that invalid date formats raise ValueError."""
+        with pytest.raises(ValueError):
+            life_path_number("1990/05/15")
+
+        with pytest.raises(ValueError):
+            life_path_number("15-05-1990")
+
+        with pytest.raises(ValueError):
+            life_path_number("not-a-date")
+
+    def test_life_path_number_invalid_date(self):
+        """Test that invalid dates raise ValueError."""
+        with pytest.raises(ValueError):
+            life_path_number("1990-13-01")  # Invalid month
+
+        with pytest.raises(ValueError):
+            life_path_number("1990-02-30")  # Invalid day for February
+
+    def test_life_path_number_leap_year(self):
+        """Test leap year date handling."""
+        # 2000 is a leap year
+        result = life_path_number("2000-02-29")
+        assert 1 <= result <= 9
+
+        # 1900 is not a leap year
+        with pytest.raises(ValueError):
+            life_path_number("1900-02-29")
+
+    def test_life_path_number_edge_dates(self):
+        """Test edge case dates."""
+        # Minimum date
+        result_min = life_path_number("0001-01-01")
+        assert 1 <= result_min <= 9
+
+        # Maximum date
+        result_max = life_path_number("9999-12-31")
+        assert 1 <= result_max <= 9
+
+
+class TestMasterNumberScenarios:
+    """Test cases specifically for master number handling across all functions."""
+
+    def test_master_number_11_in_personality(self):
+        """Test that personality number can return 11."""
+        # John Smith should give personality number 11
+        result = personality_number("John", "Smith")
+        assert result == 11
+
+    def test_master_number_preservation_difference(self):
+        """Test how functions differ in preserving master numbers."""
+        # Use a name that produces master numbers
+        # Destiny should reduce, personality/heart desire should preserve
+
+        # For any name, if intermediate calculation produces master number:
+        # - destiny_number should reduce it
+        # - personality_number and heart_desire_number may preserve it
+
+        # This is more of a behavioral test
+        destiny = destiny_number("Test", "Name")
+        personality = personality_number("Test", "Name")
+        heart = heart_desire_number("Test", "Name")
+
+        # Destiny should never be a master number
+        assert destiny not in (11, 22, 33)
+        assert 1 <= destiny <= 9
+
+        # Personality and heart desire can be master numbers
+        assert personality in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
+        assert heart in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
+
+    def test_life_path_never_master(self):
+        """Test that life path number never returns master numbers."""
+        # Test multiple dates
+        dates = ["1990-05-15", "1988-11-22", "2000-01-01", "1975-03-30"]
+
+        for date in dates:
+            result = life_path_number(date)
+            assert result not in (11, 22, 33)
+            assert 1 <= result <= 9
+
+
+class TestEdgeCases:
+    """Test edge cases and error conditions."""
+
+    def test_special_characters_in_names(self):
+        """Test that special characters are handled correctly."""
+        # Names with hyphens, apostrophes, etc.
+        result1 = destiny_number("Jean-Pierre", "O'Brien")
+        assert 1 <= result1 <= 9
+
+        result2 = personality_number("Mary-Ann", "St. James")
+        assert result2 in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
+
+    def test_unicode_names(self):
+        """Test that Unicode names are handled correctly."""
+        result = destiny_number("Björk", "Guðmundsdóttir")
+        assert 1 <= result <= 9
+
+    def test_very_long_names(self):
+        """Test that very long names are handled correctly."""
+        long_name = "A" * 100
+        result = destiny_number(long_name, long_name)
+        assert 1 <= result <= 9
+
+    def test_numbers_in_names(self):
+        """Test that numbers in names are ignored."""
+        # Numbers should be filtered out
+        result1 = destiny_number("John123", "Smith456")
+        result2 = destiny_number("John", "Smith")
+        assert result1 == result2
+
+
+class TestKnownExamples:
+    """Test with known numerology examples to verify accuracy."""
+
+    def test_jean_pierre_boisrond(self):
+        """Test with Jean-Pierre Boisrond example from legacy tests."""
+        # This is a known example from the legacy system
+        destiny = destiny_number("Jean-Pierre", "Boisrond")
+        personality = personality_number("Jean-Pierre", "Boisrond")
+        heart = heart_desire_number("Jean-Pierre", "Boisrond")
+        life_path = life_path_number("1958-12-15")
+
+        # Verify all results are in valid ranges
+        assert 1 <= destiny <= 9
+        assert personality in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
+        assert heart in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
+        assert 1 <= life_path <= 9

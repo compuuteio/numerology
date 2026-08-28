@@ -1,0 +1,33 @@
+from dataclasses import dataclass
+
+from numerology.legacy.base.model.field import Field, FieldCode
+from numerology.legacy.pythagorean.field_code import PythagoreanFieldCode
+from numerology.legacy.pythagorean.initializer import (
+    DESTINY_NUMBER_INITIALIZER,
+    PERSONALITY_NUMBER_INITIALIZER,
+    HEART_DESIRE_NUMBER_INITIALIZER,
+    ACTIVE_NUMBER_INITIALIZER,
+    FULL_NAME_MISSING_NUMBERS_INITIALIZER,
+    FULL_NAME_NUMBERS_INITIALIZER,
+    POWER_NUMBER_INITIALIZER,
+    LIFE_PATH_NUMBER_INITIALIZER,
+    LEGACY_NUMBER_INITIALIZER,
+)
+
+
+PYTHAGOREAN_FIELDS: dict[FieldCode, Field] = {}
+
+
+@dataclass(frozen=True)
+class PythagoreanField:
+    """Pythagorean Numerology Fields."""
+
+    ACTIVE_NUMBER: Field = Field(**ACTIVE_NUMBER_INITIALIZER)
+    DESTINY_NUMBER = Field(**DESTINY_NUMBER_INITIALIZER)
+    FULL_NAME_MISSING_NUMBERS = Field(**FULL_NAME_MISSING_NUMBERS_INITIALIZER)
+    FULL_NAME_NUMBERS = Field(**FULL_NAME_NUMBERS_INITIALIZER)
+    HEART_DESIRE_NUMBER = Field(**HEART_DESIRE_NUMBER_INITIALIZER)
+    LEGACY_NUMBER = Field(**LEGACY_NUMBER_INITIALIZER)
+    LIFE_PATH_NUMBER = Field(**LIFE_PATH_NUMBER_INITIALIZER)
+    PERSONALITY_NUMBER = Field(**PERSONALITY_NUMBER_INITIALIZER)
+    POWER_NUMBER = Field(**POWER_NUMBER_INITIALIZER)

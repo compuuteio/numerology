@@ -51,8 +51,7 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# Translations
-*.mo
+# Translation templates are generated, but compiled legacy catalogs are source assets.
 *.pot
 
 # Django stuff:

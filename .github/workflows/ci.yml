@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run ruff format --check .
+      - run: uv run ruff check .
+      - run: uv run mypy
+      - run: uv run pytest --cov=numerology.common --cov=numerology.pythagorean --cov=numerology.cli --cov-report=term-missing --cov-fail-under=90
+      - run: uv build
+      - name: Smoke-test the wheel
+        run: |
+          uv venv --clear .smoke
+          uv pip install --python .smoke/bin/python dist/*.whl
+          .smoke/bin/python -c "from numerology import pythagorean; assert pythagorean.destiny_number('Ada', 'Lovelace')"
+          .smoke/bin/numerology Ada Lovelace 1815-12-10 >/dev/null

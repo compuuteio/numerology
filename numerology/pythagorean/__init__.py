@@ -1,15 +1,30 @@
-import json
-from typing import Dict
+"""Public functional API for Pythagorean numerology."""
 
-from .colors import Colors
-from .interpretations import Interpretations
+from .calculations import (
+    destiny_number,
+    heart_desire_number,
+    life_path_number,
+    personality_number,
+)
+from .interpretations import (
+    interpret_destiny_number,
+    interpret_heart_desire_number,
+    interpret_life_path_number,
+    interpret_personality_number,
+)
+from .reading import full_reading
+from .types import Interpretation, Reading
 
-
-def print_beautiful_dict(dictionnary: Dict):
-    print(
-        f"{Colors.OKCYAN}{json.dumps(dictionnary, indent=4, sort_keys=False, ensure_ascii=False)}{Colors.ENDC}"
-    )
-
-
-if __name__ == "__main__":
-    print_beautiful_dict(Interpretations.get_interpretation("life_path_number", 1))
+__all__ = [
+    "Interpretation",
+    "Reading",
+    "destiny_number",
+    "full_reading",
+    "heart_desire_number",
+    "interpret_destiny_number",
+    "interpret_heart_desire_number",
+    "interpret_life_path_number",
+    "interpret_personality_number",
+    "life_path_number",
+    "personality_number",
+]
