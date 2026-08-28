@@ -38,9 +38,9 @@ interpretation = interpret_destiny_number(number)
 
 Names are normalized to the ASCII Latin alphabet, accents and punctuation are
 removed, and `y` is treated as a vowel. A birthdate must be a real ISO date in
-`YYYY-MM-DD` format. Destiny and life-path numbers reduce to 1–9; personality
-and heart-desire numbers preserve 11, 22, and 33. A personality or heart-desire
-number may be zero when the normalized name has no applicable letters.
+`YYYY-MM-DD` format. All four calculations preserve the supported master
+numbers 11, 22, and 33. A personality or heart-desire number may be zero when
+the normalized name has no applicable letters.
 
 The return contracts are available as `numerology.pythagorean.Interpretation`
 and `numerology.pythagorean.Reading` `TypedDict` definitions.

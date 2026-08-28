@@ -24,13 +24,10 @@ class TestDestinyNumber:
         result = destiny_number("John", "Smith")
         assert result == 8
 
-    def test_destiny_number_no_master_preservation(self):
-        """Test that destiny numbers do not preserve master numbers."""
-        # Create a name that sums to 29 (which reduces to 11, then to 2)
-        # We need to verify that destiny number reduces all the way to single digit
-        result = destiny_number("Bob", "Bob")  # B(2)+O(6)+B(2)+B(2)+O(6)+B(2) = 20 -> 2
-        assert 1 <= result <= 9
-        assert result not in (11, 22, 33)
+    def test_destiny_number_preserves_master_numbers(self):
+        """The book treats 11 and 22 as expression-number master numbers."""
+        # Eleven A's total 11 and must not be reduced to 2.
+        assert destiny_number("A" * 11, "") == 11
 
     def test_destiny_number_empty_names(self):
         """Test that empty names raise ValueError."""
@@ -143,12 +140,12 @@ class TestLifePathNumber:
         result = life_path_number("1990-05-15")
         assert result == 3
 
-    def test_life_path_number_no_master_preservation(self):
-        """Test that life path numbers do not preserve master numbers."""
-        # Test a date that might produce master numbers in intermediate steps
-        result = life_path_number("1988-11-22")
-        assert 1 <= result <= 9
-        assert result not in (11, 22, 33)
+    def test_life_path_number_preserves_master_numbers(self):
+        """The book's examples retain master life-path numbers."""
+        # Gilbert Trigano, born 1920-07-28: 3 + 7 + 1 = 11.
+        assert life_path_number("1920-07-28") == 11
+        # Paul Bocuse, born 1926-02-11: 9 + 2 + 11 = 22.
+        assert life_path_number("1926-02-11") == 22
 
     def test_life_path_number_invalid_format(self):
         """Test that invalid date formats raise ValueError."""
@@ -213,23 +210,19 @@ class TestMasterNumberScenarios:
         personality = personality_number("Test", "Name")
         heart = heart_desire_number("Test", "Name")
 
-        # Destiny should never be a master number
-        assert destiny not in (11, 22, 33)
-        assert 1 <= destiny <= 9
+        assert destiny in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
 
         # Personality and heart desire can be master numbers
         assert personality in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
         assert heart in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
 
-    def test_life_path_never_master(self):
-        """Test that life path number never returns master numbers."""
-        # Test multiple dates
+    def test_life_path_returns_supported_numbers(self):
+        """Life paths reduce to a single digit or a supported master number."""
         dates = ["1990-05-15", "1988-11-22", "2000-01-01", "1975-03-30"]
 
         for date in dates:
             result = life_path_number(date)
-            assert result not in (11, 22, 33)
-            assert 1 <= result <= 9
+            assert result in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
 
 
 class TestEdgeCases:
@@ -239,7 +232,7 @@ class TestEdgeCases:
         """Test that special characters are handled correctly."""
         # Names with hyphens, apostrophes, etc.
         result1 = destiny_number("Jean-Pierre", "O'Brien")
-        assert 1 <= result1 <= 9
+        assert result1 in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
 
         result2 = personality_number("Mary-Ann", "St. James")
         assert result2 in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
@@ -264,18 +257,27 @@ class TestEdgeCases:
 
 
 class TestKnownExamples:
-    """Test with known numerology examples to verify accuracy."""
+    """Regression tests for worked examples in the reference book."""
 
     def test_jean_pierre_boisrond(self):
-        """Test with Jean-Pierre Boisrond example from legacy tests."""
-        # This is a known example from the legacy system
+        """Jean-Pierre Boisrond's worked calculation is reproduced exactly."""
         destiny = destiny_number("Jean-Pierre", "Boisrond")
         personality = personality_number("Jean-Pierre", "Boisrond")
         heart = heart_desire_number("Jean-Pierre", "Boisrond")
         life_path = life_path_number("1958-12-15")
 
-        # Verify all results are in valid ranges
-        assert 1 <= destiny <= 9
-        assert personality in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
-        assert heart in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33)
-        assert 1 <= life_path <= 9
+        assert (destiny, personality, heart, life_path) == (8, 7, 1, 5)
+
+    def test_alain_delon(self):
+        """The book gives Alain Delon expression 6 and intimate number 22."""
+        assert destiny_number("Alain", "Delon") == 6
+        assert heart_desire_number("Alain", "Delon") == 22
+
+    def test_gilbert_trigano(self):
+        """The book gives Gilbert Trigano expression 4 and life path 11."""
+        assert destiny_number("Gilbert", "Trigano") == 4
+        assert life_path_number("1920-07-28") == 11
+
+    def test_paul_bocuse(self):
+        """The book gives Paul Bocuse life path 22."""
+        assert life_path_number("1926-02-11") == 22

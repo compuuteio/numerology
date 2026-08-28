@@ -73,7 +73,12 @@ def test_calculations_are_deterministic(first_name: str, last_name: str) -> None
         first = function(first_name, last_name)
         assert first == function(first_name, last_name)
 
-    assert destiny_number(first_name, last_name) in range(1, 10)
+    assert destiny_number(first_name, last_name) in {
+        *range(1, 10),
+        11,
+        22,
+        33,
+    }
     assert personality_number(first_name, last_name) in {
         *range(10),
         11,
@@ -97,7 +102,7 @@ def test_calculations_are_deterministic(first_name: str, last_name: str) -> None
 def test_life_path_accepts_real_iso_dates(value) -> None:
     encoded = value.isoformat()
     assert parse_birthdate(encoded) == (value.year, value.month, value.day)
-    assert life_path_number(encoded) in range(1, 10)
+    assert life_path_number(encoded) in {*range(1, 10), 11, 22, 33}
 
 
 @pytest.mark.parametrize(

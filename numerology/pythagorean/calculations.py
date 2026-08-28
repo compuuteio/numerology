@@ -34,7 +34,7 @@ def _validated_full_name(first_name: str, last_name: str) -> str:
 def destiny_number(first_name: str, last_name: str) -> int:
     """Calculate the destiny number from every letter in the full name."""
     numbers = name_to_numbers(_validated_full_name(first_name, last_name))
-    return reduce_number(sum(numbers), preserve_master_numbers=False)
+    return reduce_number(sum(numbers))
 
 
 def personality_number(first_name: str, last_name: str) -> int:
@@ -53,8 +53,8 @@ def life_path_number(birthdate: str) -> int:
     """Calculate the life-path number from a strict ISO birthdate."""
     year, month, day = parse_date(birthdate)
     components = (
-        reduce_number(year, preserve_master_numbers=False),
-        reduce_number(month, preserve_master_numbers=False),
-        reduce_number(day, preserve_master_numbers=False),
+        reduce_number(year),
+        reduce_number(month),
+        reduce_number(day),
     )
-    return reduce_number(sum(components), preserve_master_numbers=False)
+    return reduce_number(sum(components))
