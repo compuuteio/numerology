@@ -36,6 +36,12 @@ number = destiny_number("Ada", "Lovelace")
 interpretation = interpret_destiny_number(number)
 ```
 
+The Pythagorean API also provides `active_number`, `hereditary_number`,
+`birth_day_number`, `birth_month_number`, `birth_year_number`,
+`name_number_grid`, and `missing_number_lessons`. For calendar-cycle work, use
+`personal_year_number`, `personal_month_number`, and `personal_day_number`.
+Each numeric calculation has a matching `interpret_*` function.
+
 Names are normalized to the ASCII Latin alphabet, accents and punctuation are
 removed, and `y` is treated as a vowel. A birthdate must be a real ISO date in
 `YYYY-MM-DD` format. All four calculations preserve the supported master
