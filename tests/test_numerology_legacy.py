@@ -10,7 +10,7 @@ import unittest
 from numerology.legacy.pythagorean.old_numerology import Numerology as Pythagorean
 
 # Use the command below to run tests
-# python3 -m unittest tests/test_numerology.py
+# python3 -m unittest tests/test_numerology_legacy.py
 
 
 # class VersionTestCase(unittest.TestCase):

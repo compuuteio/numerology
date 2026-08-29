@@ -8,9 +8,28 @@ testing specific examples, edge cases, and master number scenarios.
 import pytest
 
 from numerology.pythagorean import (
+    active_number,
+    birth_day_number,
+    birth_month_number,
+    birth_year_number,
     destiny_number,
     heart_desire_number,
+    hereditary_number,
+    interpret_active_number,
+    interpret_birth_day_number,
+    interpret_birth_month_number,
+    interpret_birth_year_number,
+    interpret_hereditary_number,
+    interpret_missing_number_lesson,
+    interpret_personal_day_number,
+    interpret_personal_month_number,
+    interpret_personal_year_number,
     life_path_number,
+    missing_number_lessons,
+    name_number_grid,
+    personal_day_number,
+    personal_month_number,
+    personal_year_number,
     personality_number,
 )
 
@@ -281,3 +300,69 @@ class TestKnownExamples:
     def test_paul_bocuse(self):
         """The book gives Paul Bocuse life path 22."""
         assert life_path_number("1926-02-11") == 22
+
+
+class TestAdditionalBookCalculations:
+    """Worked calculations from the Jean-Pierre Boisrond example."""
+
+    def test_active_and_hereditary_numbers(self):
+        assert active_number("Jean-Pierre") == 2
+        assert hereditary_number("Boisrond") == 6
+
+    def test_birthdate_components(self):
+        birthdate = "1958-12-15"
+        assert birth_day_number(birthdate) == 6
+        assert birth_month_number(birthdate) == 3
+        assert birth_year_number(birthdate) == 5
+
+    def test_name_grid_and_missing_lessons(self):
+        assert name_number_grid("Jean-Pierre", "Boisrond") == {
+            1: 3,
+            2: 1,
+            3: 0,
+            4: 1,
+            5: 5,
+            6: 2,
+            7: 1,
+            8: 0,
+            9: 5,
+        }
+        assert missing_number_lessons("Jean-Pierre", "Boisrond") == (3, 8)
+
+    def test_personal_cycles(self):
+        # The book's 1984 example gives Jean-Pierre a personal year 4.
+        birthdate = "1958-12-15"
+        assert personal_year_number(birthdate, 1984) == 4
+        assert personal_month_number(birthdate, 1984, 5) == 9
+        assert personal_month_number(birthdate, 1984, 11) == 6
+        assert personal_day_number(birthdate, 1984, 5, 26) == 8
+        assert personal_day_number(birthdate, 1984, 11, 12) == 9
+
+    def test_personal_day_requires_a_real_calendar_date(self):
+        with pytest.raises(ValueError, match="real calendar date"):
+            personal_day_number("1958-12-15", 1984, 2, 30)
+
+
+@pytest.mark.parametrize(
+    "function",
+    (
+        interpret_active_number,
+        interpret_hereditary_number,
+        interpret_birth_day_number,
+        interpret_birth_month_number,
+        interpret_birth_year_number,
+        interpret_missing_number_lesson,
+        interpret_personal_year_number,
+        interpret_personal_month_number,
+        interpret_personal_day_number,
+    ),
+)
+def test_additional_calculations_have_complete_interpretations(function):
+    interpretation = function(1)
+    assert set(interpretation) == {
+        "title",
+        "description",
+        "strengths",
+        "weaknesses",
+    }
+    assert all(value.strip() for value in interpretation.values())
